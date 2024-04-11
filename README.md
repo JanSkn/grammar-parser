@@ -27,7 +27,7 @@
 ## About The Project
 
 <p align="center">
-  <img width="835" alt="image" src="https://github.com/JanSkn/grammar-parser/assets/68644413/4fbf3e6f-8b09-4e19-ae57-5e30cc412c95">
+  <img width="813" alt="image" src="https://github.com/JanSkn/grammar-parser/assets/68644413/c36c45b4-9d25-4c5a-9215-ed13f195490e">
 </p>
 
 <br /><br />
