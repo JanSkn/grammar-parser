@@ -32,6 +32,7 @@
 
 <br /><br />
 The parser checks the sentences after certain structural constraints.
+<br />
 This means, a sentence must consist of a noun phrase and a verb phrase. These can vary in their structure, such as active and passive
 sentences, prepositions and so on.
 
