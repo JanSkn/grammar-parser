@@ -11,7 +11,7 @@ np_rest(N, Number, Person, Animacy) --> n(N, Number, Person, Animacy).          
 np_rest(jp(Adj, N), Number, Person, _) --> adj(Adj), np_rest(N, Number, Person, _).
 %%% Verb phrase %%%
 vp(vp(V, NP), Number, Person, active, Animacy) --> v(V, Number, tv, Person, Animacy), np(NP, _, _, acc, _).     % either verb and object pronoun or new np
-vp(vp(Aux, V, By, NP), Number, Person, passive, _) --> 
+vp(vp(Aux, V, byPrepP(By, NP)), Number, Person, passive, _) --> 
     aux(Aux, Number, Person), pastPart(V, Number, Person, _), byprep(By), np(NP, _, _, acc, _).
 vp(vp(V), Number, Person, _, Animacy) --> v(V, Number, iv, Person, Animacy).                                    % special case --> intransitive; end of sentence
 
@@ -22,7 +22,7 @@ det(det(Word), Number) --> [Word], {lex(Word, det, Number)}.
 n(n(Word), Number, Person, Animacy) --> [Word], {lex(Word, n, Number, _, Person, Animacy)}. 
 %%% Verbs %%%
 v(v(Word), Number, Transitivity, Person, Animacy) --> [Word], {lex(Word, Transitivity, Number, Person, Animacy)}. 
-pastPart(byPrepP(Word), Number, Person, _) --> [Word], {lex(Word, _, Number, Person, _)}. 
+pastPart(v(Word), Number, Person, _) --> [Word], {lex(Word, _, Number, Person, _)}. 
 aux(aux(Word), Number, Person) --> [Word], {lex(Word, aux, Number, Person)}.
 %%% Adjectives %%%
 adj(adj(Word)) --> [Word], {lex(Word, adj)}.
